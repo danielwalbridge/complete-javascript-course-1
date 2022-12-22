@@ -48,3 +48,22 @@ const age2FromAnon = ageFromAnon(2000);
 
  console.log(age2FromAnon)
   */
+
+/*
+// function expression
+ const ageFromAnon = function (birthYear) {
+     return 2037 - birthYear;
+ }
+ // arrow function
+ const arrowAge = birthYear => 2037 - birthYear;
+
+ const myAge = arrowAge(1992);
+ console.log(myAge)
+
+ const yearsBeforeRetire = (birthYear, firstName) => {
+     const age = 2037 - birthYear;
+     const retire = 65 - age;
+     return `${firstName} has ${retire} years until they can retire`;
+ }
+ console.log(yearsBeforeRetire(2000, 'Lil Bear'))
+ */
