@@ -29,3 +29,22 @@ if (hasDriversLicense) console.log(" I can drive")
  fruitProcessor(6,19);
   */
 
+
+ /*
+  function calcAgeDec(birthYear) {
+     return 2037 - birthYear;
+ }
+
+ const ageFromDec = calcAgeDec(1992);
+ console.log(ageFromDec)
+
+ // anon function
+
+ const ageFromAnon = function (birthYear) {
+     return 2037 - birthYear;
+ }
+
+const age2FromAnon = ageFromAnon(2000);
+
+ console.log(age2FromAnon)
+  */
