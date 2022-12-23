@@ -143,14 +143,111 @@ Test data: 125, 555 and 44
   */
 
 
- const calcTip = function (bill) {
-  return bill >= 50 && bill <= 300 ? bill *.15 : bill *.20
- }
+ // const calcTip = function (bill) {
+ //  return bill >= 50 && bill <= 300 ? bill *.15 : bill *.20
+ // }
+ //
+ // const bills = [125, 555, 44];
+ //
+ // const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])]
+ // console.log(tips)
+ //
+ // const totals = [tips[0] + bills[0], tips[1] + bills[1], tips[2] + bills[2]];
+ // console.log(totals)
 
- const bills = [125, 555, 44];
+ // Objects
 
- const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])]
- console.log(tips)
+ // const dann = {
+ //  firstName: "dann",
+ //  lastName: "Walbridge",
+ //  partner: "Amber",
+ //  job: "developer",
+ //  cats: ["Lil Bear", "Delphi"],
+ //  likesSnacks: true,
+ //  birthYear: 1992,
 
- const totals = [tips[0] + bills[0], tips[1] + bills[1], tips[2] + bills[2]];
- console.log(totals)
+  // specify the function as an expression
+  // calcAge: function () {
+  //  return 2037 - this.birthYear;
+  // }
+
+  // use to reduce code in case method is called multiple times.
+ //  calcAge: function () {
+ //   this.age = 2037 - this.birthYear;
+ //   return this.age;
+ //  },
+ //
+ //  getSum: function () {
+ //   this.summary = `${this.firstName} is a ${this.calcAge()} year old ${this.job} and he ${this.likesSnacks ? "likes snacks" : "does not like snacks"}`
+ //   return this.summary;
+ //  }
+ // }
+ // // dot notation
+ // console.log(dann.cats)
+ //
+ // // bracket
+ // const nameKey = "Name"
+ // console.log(dann["first" + nameKey], dann[ "last" + nameKey])
+ //
+ // const interestedIn = prompt(`what do you want to know about Dann?
+ // Choose from firstName, lastName, partner, job, cats`);
+ //
+ // console.log(dann[interestedIn])
+ //
+ // if (dann[interestedIn]) {
+ //  console.log(dann[interestedIn])
+ // }else {
+ //  console.log(" whoa there partner, that aint a thing")
+ // }
+ //
+ // // creating a property with dot
+ // dann.likesSnacks = true;
+ // dann["shapeOfGlasses"] = "round"
+ //
+ // console.log(dann["shapeOfGlasses"])
+ // console.log(dann.likesSnacks)
+
+ // console.log(`${dann.firstName} has ${dann.cats.length} and their names are ${dann.cats.at(0)} and ${dann.cats.at(1)}`);
+
+// console.log(dann.getSum());
+
+ /*
+ Coding Challenge #3
+Let's go back to Mark and John comparing their BMIs! This time, let's use objects to implement the calculations!
+Remember: BMI = mass / height ** 2 = mass / (height * height) (mass in kg and height in meter)
+Your tasks:
+
+1. For each of them, create an object with properties for their full name,mass,and height (Mark Miller and John Smith)
+
+2. Create a 'calcBMI' method on each object to calculate the BMI(the same method on both objects).
+ Store the BMI value to a property, and also return it from the method
+3. Log to the console who has the higher BMI, together with the full name and the respective BMI.
+ Example: "John's BMI (28.3) is higher than Mark's (23.9)!"
+Test data: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m tall.
+  */
+
+ // const mark = {
+ //  fullName: "Mark Miller",
+ //  mass: 78,
+ //  height: 1.69,
+ //  calcBMI: function () {
+ //   this.BMI = this.mass / this.height **2
+ //   return this.BMI;
+ //  }
+ // }
+ //
+ // const john = {
+ //  fullName: "John Smith",
+ //  mass: 92,
+ //  height: 1.95,
+ //  calcBMI: function () {
+ //   this.BMI = this.mass / this.height **2
+ //   return this.BMI;
+ //  }
+ // }
+ //
+ // if (john.calcBMI() > mark.calcBMI()) {
+ //  console.log(`${john.fullName}'s BMI (${john.BMI})is higher than ${mark.fullName}'s BMI(${mark.BMI})`)
+ // } else {
+ //  console.log(`${mark.fullName}'s BMI (${mark.BMI})is higher than ${john.fullName}'s BMI(${john.BMI})`)
+ // }
