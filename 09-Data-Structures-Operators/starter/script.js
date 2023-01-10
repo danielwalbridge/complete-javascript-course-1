@@ -26,4 +26,71 @@ const restaurant = {
       close: 24,
     },
   },
+
+  order: function(starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]]
+  },
+
+  orderDelivery: function({ starterIndex, mainIndex, time, address }) {
+    console.log(starterIndex, mainIndex,time, address);
+  }
 };
+
+restaurant.orderDelivery( {
+  time: '22:30',
+  address: ' Nub club 69 420 ',
+  starterIndex: 2,
+  mainIndex: 2
+})
+
+// let [main,, third] = restaurant.categories;
+// console.log(main, third);
+// console.log();
+//
+// // swapping varibles with deconstructing.
+// [main, third] = [third, main];
+// console.log(main, third);
+//
+// // 2 return values from a function with deconstruction.
+// const [starterOrder, mainOrder] = restaurant.order(0,0)
+// console.log(`you have placed an order of ${starterOrder} from our starter menu
+// and ${mainOrder} from our main menu`);
+//
+//
+// const nested = [2,4,[1,2]];
+// const[firstN, secondN, thridN] = nested;
+// console.log(firstN, secondN, thridN);
+// const [,,[innerOne, innerTwo]] = nested;
+// console.log(innerOne, innerTwo);
+//
+// // default values
+//
+// const [p=1,q=1,r=1] = [44,5];
+// console.log(p,q,r);
+
+// const {name, openingHours} = restaurant;
+// console.log(name, openingHours);
+//
+// const{name: resturantName} = restaurant
+// console.log(resturantName);
+//
+// const{menu = [], starterMenu: starters = []} = restaurant;
+// console.log(menu, starters
+// );
+//
+// // mutating variables
+// let a = 11;
+// let b = 999;
+// const obj = {
+//   a: 23,
+//   b: 7,
+//   c:14
+// };
+// console.log(a,b);
+// // if we want to mutate an object we first need to put it inside () ---- This is because we can't start a line with {} since JS will think its a block
+// ({a,b} = obj);
+// console.log(a,b);
+//
+// // nested objects.
+// const {fri: {open,close}} = restaurant.openingHours;
+// console.log(open,close);
