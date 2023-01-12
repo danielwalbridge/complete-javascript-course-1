@@ -33,15 +33,28 @@ const restaurant = {
 
   orderDelivery: function({ starterIndex, mainIndex, time, address }) {
     console.log(starterIndex, mainIndex,time, address);
+  },
+
+  orderPasta: function(i1,i2,i3) {
+    console.log(`Here is a pasta made withe the following: ${i1}, ${i2}, ${i3}`);
+  },
+
+  orderPizza: function(mainIngredient, ...others) {
+    console.log(mainIngredient);
+    console.log(others);
   }
 };
 
-restaurant.orderDelivery( {
-  time: '22:30',
-  address: ' Nub club 69 420 ',
-  starterIndex: 2,
-  mainIndex: 2
-})
+
+// const pizzaPie = restaurant.orderPizza('pepporoni', ' myy ass', 'your ass');
+
+
+// restaurant.orderDelivery( {
+//   time: '22:30',
+//   address: ' Nub club 69 420 ',
+//   starterIndex: 2,
+//   mainIndex: 2
+// })
 
 // let [main,, third] = restaurant.categories;
 // console.log(main, third);
@@ -94,3 +107,104 @@ restaurant.orderDelivery( {
 // // nested objects.
 // const {fri: {open,close}} = restaurant.openingHours;
 // console.log(open,close);
+
+// const arr = [7,8,9];
+// const badNewArr = [1,2,arr[0], arr[1], arr[2]];
+// console.log(badNewArr);
+//
+// // using the spread opperator.
+// const newArr = [1,2, ...arr];
+// console.log(newArr);
+// console.log(...newArr);
+//
+// const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+// console.log(newMenu);
+//
+// // create a shallow copy of an array.
+// const mainMenuCopy = [...restaurant.mainMenu];
+// console.log(mainMenuCopy);
+//
+// // join two arrays.
+// const joinTwoArray = [...restaurant.starterMenu, ...restaurant.mainMenu];
+// console.log(joinTwoArray);
+//
+// const string = ' Little B is cute';
+// const letters = [...string.trim()];
+// console.log(letters);
+//
+// restaurant.orderPasta('pizza', 'butts', 'titty');
+//
+// const ingredients = [prompt(`let's make pasta! select your first ingredient`), prompt(`ingredient 2`), prompt(`ingredient 3`)]
+//
+// console.log(ingredients);
+//
+// restaurant.orderPasta(...ingredients);
+//
+// // objects
+//
+// const newResturant = {...restaurant, Founder: 'Delphi'};
+//
+// console.log(newResturant);
+//
+// const restCopy = {...restaurant};
+// restCopy.name = 'balls';
+// console.log(restCopy);
+
+
+// rest pattern
+// const [a,b, ...others] = [1,2,3,4,5,6,7];
+// console.log(a,b,others);
+//
+// const [pizza,,risotto, ...otherFood] = [...restaurant.mainMenu, ...restaurant.starterMenu];
+// console.log(pizza, risotto, otherFood);
+//
+// // objects
+// // want to collect sat, and the rest.
+//
+// const {sat, ...weekdays} = restaurant.openingHours;
+// console.log(sat, weekdays);
+//
+// // functions
+//
+// const add = function(...numbers) {
+//   let sum = 0;
+//   for (let i =0; i<numbers.length;i++) {
+//     sum+=numbers[i];
+//   }
+//   return sum;
+// }
+// console.log(add(1,2,3));
+// add(1,2,3,4,5);
+//
+// const numbersToAdd = [5,6,10];
+// console.log(add(...numbersToAdd));
+
+
+// const restaurant1 = {
+//   name: `Lil Bears Kibble Den`,
+//   numGuests: 0
+// };
+//
+// const restaurant2 = {
+//   name: `Delphi's Hog Hut `,
+//   owner: `Delphi`
+// };
+
+// using short-circuiting
+// restaurant1.numGuests = restaurant1.numGuests || 10;
+// restaurant2.numGuests = restaurant2.numGuests || 10;
+
+// using or assigment operator, will work, looks for falsey
+// restaurant1.numGuests ||=10;
+// restaurant2.numGuests ||=10;
+
+// using the nullish assigment operator ( null or undefined)
+// restaurant1.numGuests ??= 10;
+// restaurant2.numGuests ??= 10;
+//
+// // using the and assigment operator.
+// restaurant1.owner &&= 'anonymous'
+// restaurant2.owner &&= 'anonymous'
+//
+// console.log(restaurant1);
+// console.log(restaurant2);
