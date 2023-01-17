@@ -45,6 +45,43 @@ const restaurant = {
   }
 };
 
+// const menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
+//
+// // for (const item of menu) console.log(item);
+//
+// //Grabbing the indexes of each item as well
+// // for (const item of menu.entries()) console.log(item);
+//
+// // putting it all together with destructoring as well
+// for (const[i, el]  of menu.entries()) {
+//   console.log(`${i +1}: ${el}`);
+// }
+
+// Optional chaining (?.)
+// console.log(restaurant.openingHours?.mon?.open);
+//
+// const days = ['mon', 'tues', 'wed', 'thu', 'fri', 'sat', 'sun'];
+// for (const day of days) {
+//   const open = restaurant.openingHours[day]?.open;
+//   if (open !==undefined) {
+//     console.log(`on ${day} we open at ${open}`);
+//   }
+// }
+// // checks to see if a method exists
+// console.log(restaurant.order?.(0,1) ?? 'Method does not exist');
+//
+// // Checks to see if an array is empty
+// const users = [
+//   {name: 'Dann', email :'hello@gmail.com'},
+//   {name: 'Amber', email: 'cutie@gmail.com'}
+// ];
+//
+// console.log(users[0]?.name ?? 'User not found');
+//
+// console.log(users[3]?.name ?? 'User not found');
+
+
+
 
 // const pizzaPie = restaurant.orderPizza('pepporoni', ' myy ass', 'your ass');
 
