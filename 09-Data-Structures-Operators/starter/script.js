@@ -43,7 +43,35 @@ const restaurant = {
     console.log(mainIngredient);
     console.log(others);
   }
+
 };
+
+
+// Looping Objects: Object Keys, Values, and Entries.
+
+// prop names
+const props = Object.keys(restaurant.openingHours);
+console.log(props);
+
+let openStr = `We are open on ${props.length} days: `
+for (const day of props) {
+  openStr += `${day}, `
+}
+console.log(openStr);
+
+// prop values
+const values = Object.values(restaurant.openingHours);
+console.log(values);
+
+// entries object
+const entries = Object.entries(restaurant.openingHours)
+console.log(entries);
+
+for (const [key, {open, close}] of entries) {
+  console.log(`on ${key} we open at ${open} and close at ${close}`);
+}
+
+
 
 // const menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
 //
