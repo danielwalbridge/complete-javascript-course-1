@@ -47,29 +47,29 @@ const restaurant = {
 };
 
 
-// Looping Objects: Object Keys, Values, and Entries.
-
-// prop names
-const props = Object.keys(restaurant.openingHours);
-console.log(props);
-
-let openStr = `We are open on ${props.length} days: `
-for (const day of props) {
-  openStr += `${day}, `
-}
-console.log(openStr);
-
-// prop values
-const values = Object.values(restaurant.openingHours);
-console.log(values);
-
-// entries object
-const entries = Object.entries(restaurant.openingHours)
-console.log(entries);
-
-for (const [key, {open, close}] of entries) {
-  console.log(`on ${key} we open at ${open} and close at ${close}`);
-}
+// // Looping Objects: Object Keys, Values, and Entries.
+//
+// // prop names
+// const props = Object.keys(restaurant.openingHours);
+// console.log(props);
+//
+// let openStr = `We are open on ${props.length} days: `
+// for (const day of props) {
+//   openStr += `${day}, `
+// }
+// console.log(openStr);
+//
+// // prop values
+// const values = Object.values(restaurant.openingHours);
+// console.log(values);
+//
+// // entries object
+// const entries = Object.entries(restaurant.openingHours)
+// console.log(entries);
+//
+// for (const [key, {open, close}] of entries) {
+//   console.log(`on ${key} we open at ${open} and close at ${close}`);
+// }
 
 
 
@@ -275,44 +275,77 @@ for (const [key, {open, close}] of entries) {
 // console.log(restaurant2);
 
 //
-// const game = {
-//   team1: 'Bayern Munich',
-//   team2: 'Borrussia Dortmund',
-//   players: [
-//     [
-//       'Neuer',
-//       'Pavard',
-//       'Martinez',
-//       'Alaba',
-//       'Davies',
-//       'Kimmich',
-//       'Goretzka',
-//       'Coman',
-//       'Muller',
-//       'Gnarby',
-//       'Lewandowski',
-//     ], [
-//       'Burki',
-//       'Schulz',
-//       'Hummels',
-//       'Akanji',
-//       'Hakimi',
-//       'Weigl',
-//       'Witsel',
-//       'Hazard',
-//       'Brandt',
-//       'Sancho',
-//       'Gotze',
-//     ], ],
-//   score: '4:0',
-//   scored: ['Lewandowski', 'Gnarby', 'Lewandowski',
-//     'Hummels'],
-//   date: 'Nov 9th, 2037',
-//   odds: {
-//     team1: 1.33,
-//     x: 3.25,
-//     team2: 6.5,
-//   }, };
+const game = {
+  team1: 'Bayern Munich',
+  team2: 'Borrussia Dortmund',
+  players: [
+    [
+      'Neuer',
+      'Pavard',
+      'Martinez',
+      'Alaba',
+      'Davies',
+      'Kimmich',
+      'Goretzka',
+      'Coman',
+      'Muller',
+      'Gnarby',
+      'Lewandowski',
+    ], [
+      'Burki',
+      'Schulz',
+      'Hummels',
+      'Akanji',
+      'Hakimi',
+      'Weigl',
+      'Witsel',
+      'Hazard',
+      'Brandt',
+      'Sancho',
+      'Gotze',
+    ], ],
+  score: '4:0',
+  scored: ['Lewandowski', 'Gnarby', 'Lewandowski',
+    'Hummels'],
+  date: 'Nov 9th, 2037',
+  odds: {
+    team1: 1.33,
+    x: 3.25,
+    team2: 6.5,
+  }, };
+
+// Coding Challenge 2.
+// 1. Loop over the game.scored array and print each player name to the console, along with the goal number
+// ( example: 'Goal 1: lewandowski').
+
+for (const [index, player] of game.scored.entries()) {
+  console.log(`Goal ${index +1}: ${player}`);
+}
+
+// 2. Use a loop to calculate the average odd and log it to the console,
+// ( we already studied  how to calculate averages, you can go check if you don't remember).
+
+let totalOdds = 0;
+for (const odd of Object.values(game.odds)) {
+  totalOdds += odd;
+}
+const averageOdd = totalOdds / Object.keys(game.odds).length;
+console.log(averageOdd);
+
+// 3. Print the 3 odds to the console, but in a nice formatted way, exactly like this:
+// odd of victory Bayern Munich: 1.33
+// off of draw: 3.25
+// odd of victory Borrussia Dortmund: 6.5
+// Get the team names directly from the game objcet, don't hard code them ( except for draw)
+// Hint: note how teh odds and the game objects have the same property name.
+
+totalOdds = 0;
+const entities = Object.entries(game.odds);
+for (const[team, odd] of entities) {
+  const teamStr = team ==='x' ? 'draw' :`victory ${game[team]}` ;
+  console.log(`Odd of ${teamStr} : ${odd}`);
+}
+
 //
 // // 1. Create one player array for each team (variables 'players1' and 'players2')
 // const[players1, players2] = game.players;
