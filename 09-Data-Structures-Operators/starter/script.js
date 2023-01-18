@@ -417,3 +417,62 @@ const restaurant = {
 // // creates an array using the spread operator(since it works on all iterables) from the new set.
 // const staffUnique = [...new Set(staff)];
 // console.log(staffUnique);
+
+// //Maps
+//
+// const rest = new Map();
+// rest.set('name', 'Classico Italiano');
+// rest.set(1, 'Italy');
+// rest.set(3, 'USA');
+// console.log(rest);
+//
+// rest.set('catagory', ['italian', 'pizza', 'veg', 'organic'])
+//   .set('open', 11)
+//   .set('close', 23)
+//   .set(true, ' we are open')
+//   .set(false, ' we are closed');
+//
+// // grabbing from key
+// console.log(rest.get('name'));
+// console.log(rest.get('catagory'));
+//
+// const time = 21;
+// console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
+//
+// console.log(rest.has('catagory'));
+// rest.delete(3);
+//
+// // won't find this array, because the objects are not the same
+// rest.set([1,2], 'test')
+// console.log(rest.get[1,2]);
+//
+// // will find because it's using the same object
+// const arry = [1,2];
+// rest.set(arry, 'testtt');
+// console.log(rest.get(arry));
+// console.log(rest.size);
+//
+// // maps iteration
+//
+// const question = new Map(
+//   [
+//     ['question', 'What is the best program lang in the world?'],
+//     [1, 'C'],
+//     [2, 'Java'],
+//     [3, 'JS'],
+//     ['correct',3],
+//     [true,'nice!'],
+//     [false, 'not nice!']
+//     ]);
+// console.log(question);
+//
+// // convert object to map.
+// const hoursMap = new Map(Object.entries(restaurant.openingHours));
+// console.log(hoursMap);
+// // quiz app.
+// console.log(question.get('question'));
+// for (const[key,value] of question){
+//   if (typeof key ==='number') {
+//     console.log(`Answer ${value}`);
+//   }
+// }
