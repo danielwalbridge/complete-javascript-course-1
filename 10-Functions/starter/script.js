@@ -62,3 +62,40 @@
 // const greetA = greeting => name =>   console.log(`${greeting} ${name}`);
 //
 // greetA('Hi')('BootyClap')
+
+// The Call and Apply Methods
+
+// const lufthansa = {
+//   airline: 'Lufthansa',
+//   iataCode: 'JH',
+//   bookings: [],
+//   book(flightNum, name) {
+//     console.log(`${name} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`);
+//     this.bookings.push({flight: `${this.iataCode}${flightNum}`, name})
+//   }
+// }
+// lufthansa.book(69, "Lil B");
+// lufthansa.book(420, "Delphi");
+// console.log(lufthansa);
+//
+// const wings = {
+//   name: 'wings',
+//     iataCode: 'WI',
+//   bookings: []
+//
+// }
+//
+// const book = lufthansa.book;
+//
+// // Does not work, because this points to an object...and now we are just in a funtion without one.
+// // book(33, "Amber Wilke")
+//
+// // call method
+// book.call(wings, 33, 'Amber Wilke');
+//
+// // apply method
+// const flightData = [586, 'George Bush'];
+// book.apply(wings, flightData);
+// console.log(wings);
+// // can also do the same thing with the spread operator
+// book.call(lufthansa, ...flightData);
