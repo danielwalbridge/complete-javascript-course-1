@@ -1,6 +1,8 @@
 'use strict';
 
 // Data needed for a later exercise
+
+
 const flights =
   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
 
@@ -381,3 +383,37 @@ const restaurant = {
 //
 // team1 < team2 && console.log(`Team 1 is more likely to win`);
 // team1 > team2 && logBigExpenses('Team 2 is more likely to win');
+
+//
+// // sets
+// const orderSet = new Set([
+//   'pasta',
+//   'pizza',
+//   'pizza',
+// ])
+//
+// // grab the size
+// console.log(orderSet.size);
+//
+// //check if something is in the set.
+// console.log(orderSet.has('pizza'));
+// // case sensative
+// console.log(orderSet.has('Pizza'));
+// //adding
+// orderSet.add('Garlic Bread');
+// //deleting
+// orderSet.delete('pizza');
+//
+// // delete all ele
+// // orderSet.clear();
+//
+// for (const order of orderSet) {
+//   console.log(order);
+//
+// };
+//
+// // example from array to set
+// const staff = ['waiter', 'chef', 'waiter', 'manager', 'chef','waiter'];
+// // creates an array using the spread operator(since it works on all iterables) from the new set.
+// const staffUnique = [...new Set(staff)];
+// console.log(staffUnique);
