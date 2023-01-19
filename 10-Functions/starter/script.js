@@ -200,3 +200,55 @@ GOOD LUCK 😀
 // );
 
 
+// Immediately Invoked Function Expression(IIFE)
+
+// (function() {
+//   console.log('this will only run once');
+// })();
+//
+// (() => console.log('This arrow function will also never happen again'))();
+
+
+// Closures
+
+// example 1
+// const secureBooking = function() {
+// let passCount = 0;
+//
+// return function() {
+//   passCount++;
+//   console.log(`${passCount} passengers`);
+// };
+// };
+//
+// const booker = secureBooking();
+//
+// booker();
+// booker();
+// booker();
+//
+// console.dir(booker);
+//
+//
+// // example 2
+//
+// let f;
+// const g = function() {
+//   const a = 23;
+//   f = function() {
+//     console.log(a *2);
+//   }
+// }
+//
+// g();
+// f();
+//
+//
+// (function () {
+//   const header = document.querySelector('h1');
+//   header.style.color = 'red';
+//
+//   document.querySelector('body').addEventListener('click', function () {
+//     header.style.color = 'blue';
+//   });
+// })();
