@@ -102,3 +102,9 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 //
 // // join
 // console.log(letters.join(' MEOW '));
+
+//
+// const arr = [23,44,11];
+// console.log(arr[0]);
+// console.log(arr.at(0));
+// console.log(arr.at(-1));
