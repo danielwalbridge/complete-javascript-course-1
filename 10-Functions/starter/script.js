@@ -79,9 +79,10 @@
 // console.log(lufthansa);
 //
 // const wings = {
-//   name: 'wings',
+//   airline: 'wings',
 //     iataCode: 'WI',
-//   bookings: []
+//   bookings: [],
+//
 //
 // }
 //
@@ -99,3 +100,32 @@
 // console.log(wings);
 // // can also do the same thing with the spread operator
 // book.call(lufthansa, ...flightData);
+//
+// // Bind method
+// // using bind to book with wings
+// const bookWings = book.bind(wings);
+// bookWings(22, 'Steven Hag');
+// // using bind to book with wings on a specific flight. partial application
+// const bookWings23 = book.bind(wings, 23);
+// bookWings23('Lick man');
+//
+// // With Even Listners.
+// lufthansa.planes = 300;
+// lufthansa.buyPlane = function() {
+//   console.log(this);
+//
+//   this.planes++;
+//   console.log(this.planes);
+// };
+//
+// document.querySelector('.buy').addEventListener('click', lufthansa.buyPlane.bind(lufthansa));
+//
+// // partial application
+// const addTax = (rate, value) => value + value * rate;
+// console.log(addTax(0.1, 200));
+//
+// const add20Tax = addTax.bind(null, 0.20)
+// // add20Tax = value => value + value + 0.20;
+// // the null is in place of the this keyword.
+//
+// console.log(add20Tax(100));
