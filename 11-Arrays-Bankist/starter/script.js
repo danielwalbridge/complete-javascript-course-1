@@ -74,3 +74,31 @@ const currencies = new Map([
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
+
+// let arr = ['a','b','c','d','e'];
+//
+// // slice method
+// console.log(arr.slice(2));
+// console.log(arr.slice(2,3));
+// console.log(arr.slice(-2));
+// // create a shallow copy with slice
+// console.log(arr.slice());
+// // can also create a shallow copy with the spread operator
+// console.log([...arr]);
+//
+// // splice
+// // console.log(arr.splice(1));
+// console.log(arr);
+// console.log(arr.splice(1,2));
+//
+// // reverse
+// const arr2 = ['j', 'i', 'h', 'g']
+// console.log(arr2);
+// console.log(arr2.reverse());
+//
+// // concat
+// const letters = arr.concat(arr2);
+// console.log(letters);
+//
+// // join
+// console.log(letters.join(' MEOW '));
