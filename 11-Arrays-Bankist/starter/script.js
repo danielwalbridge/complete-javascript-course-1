@@ -108,3 +108,25 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 // console.log(arr[0]);
 // console.log(arr.at(0));
 // console.log(arr.at(-1));
+
+
+movements.forEach(function(movement, index, array) {
+if (movement > 0) {
+  console.log(`You deposited ${movement} at ${index}`);
+}
+else {
+  console.log(`You withdrew ${Math.abs(movement)} at ${index}`);
+}
+})
+
+//Map
+currencies.forEach(function(value,key,map) {
+  console.log(`${key} : ${value}`);
+})
+
+// Sets
+const currenciesUniqu = new Set(['USD', 'GBP', 'USD', 'EUR', 'EUR']);
+console.log(currenciesUniqu);
+currenciesUniqu.forEach(function(value,key,map) {
+  console.log(`${key} : ${value}`);
+})
