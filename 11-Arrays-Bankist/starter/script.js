@@ -90,7 +90,7 @@ const currencies = new Map([
   ['GBP', 'Pound sterling'],
 ]);
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
 
@@ -201,3 +201,32 @@ GOOD LUCK 😀
 //
 // checkDogs([3,5,2,12,7], [4,1,15,8,3]);
 // checkDogs([9,16,6,8,3], [10,5,6,1,4])
+
+
+// Data  Transformations
+
+// map
+// const eurToUsd = 1.1;
+//
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+//
+// const movementsUSD = movements.map(function(mov) {
+//   return Math.round(mov * eurToUsd);
+// })
+//
+// const movementsUSDArrow = movements.map( mov => Math.round(mov * eurToUsd));
+//
+// console.log(movements);
+// console.log(movementsUSD);
+// console.log(movementsUSDArrow);
+//
+// const movementsDec = movements.map( (mov,i,arr) => {
+//   if (mov > 0) {
+//     return (`Movement ${i + 1} : you deposited : ${mov}`);
+//   } else {
+//     return (`Movement ${i + 1} : you withdrew : ${Math.abs(mov)}`);
+//   }
+// });
+// console.log(movementsDec);
+// // filter
+// // reduce
