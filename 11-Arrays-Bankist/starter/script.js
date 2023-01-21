@@ -80,6 +80,18 @@ const displayMovements = function(movements) {
 };
 displayMovements(account1.movements);
 
+const createUserName = function(acct) {
+  acct.forEach(function(acc) {
+    acc.userName = acc.owner
+      .toLowerCase()
+      .split(' ')
+      .map(name =>name[0])
+      .join('');
+  })
+};
+createUserName(accounts)
+console.log(accounts);
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
@@ -228,5 +240,14 @@ GOOD LUCK 😀
 //   }
 // });
 // console.log(movementsDec);
+
+
 // // filter
+
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+//
+// const deposits = movements.filter(mov =>  mov > 0 );
+// const withdrawals = movements.filter(mov =>  mov < 0 );
+// console.log(deposits);
+// console.log(withdrawals);
 // // reduce
