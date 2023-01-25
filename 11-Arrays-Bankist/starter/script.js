@@ -481,3 +481,25 @@ GOOD LUCK 😀
 // //dec
 // movements.sort((a,b) => b - a);
 // console.log(movements);
+
+
+// creating and filling arrays.
+
+// creates an array with 7 empty elements
+// const arr = [1,2,3,4,5,6,7];
+//
+// const x = new Array(7);
+// console.log(x);
+// // fill till the end.
+// x.fill(69);
+// console.log(x);
+// // fill starting at index 3.
+// x.fill(420,3);
+// console.log(x);
+//
+// // array.from
+// const y = Array.from({length: 7}, () => 1);
+// console.log(y);
+// const z = Array.from({length: 10}, (_, i) =>  i +1 );
+// console.log(z);
+
