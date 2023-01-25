@@ -114,7 +114,28 @@ const createUserName = function(acct) {
 };
 createUserName(accounts)
 
+// Event handler
+btnLogin.addEventListener('click', function (e) {
+  // Prevent form from submitting
+  e.preventDefault();
 
+  currentAccount = accounts.find(
+    acc => acc.username === inputLoginUsername.value
+  );
+  console.log(currentAccount);
+});
+
+btnLoan.addEventListener('click', function(e) {
+  e.preventDefault();
+
+  const amount = Number(inputLoanAmount.value);
+
+  if (amount > 0 && currentAccount.movements.some(mov => mov >= amount * 0.1)) {
+
+    currentAccount.movements.push(amount);
+  }
+
+})
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
@@ -372,3 +393,21 @@ GOOD LUCK 😀
 //
 // calcAverageHumanAge([5,2,4,1,15,8,3])
 // calcAverageHumanAge([16,6,10,5,6,1,4])
+
+
+// find method
+
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+//
+// const firstWithdrawal = movements.find( mov => mov < 0)
+//
+// console.log(firstWithdrawal);
+
+// some and every method.
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+//
+// const anyDeposit = movements.some(mov => mov > 0 );
+// console.log(anyDeposit);
+// const everyDeposit = movements.every(mov=> mov > 0);
+// console.log(everyDeposit);
+
