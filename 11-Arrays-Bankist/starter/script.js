@@ -462,3 +462,22 @@ GOOD LUCK 😀
 //   .flatMap(acc => acc.movements)
 // .reduce((acc, mov) => acc + mov);
 // console.log(allAccMovsSumUsingflatMap);
+
+
+// sorting Arrays
+//
+// // sort
+// const owners = ['Jonas', 'Zach', 'Adam', 'Martha'];
+// console.log(owners.sort());
+//
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+// console.log(movements.sort());
+// // return  <0, a, b
+// // return >0, b,a
+// // sort acc
+// movements.sort((a,b) => a - b );
+// console.log(movements);
+//
+// //dec
+// movements.sort((a,b) => b - a);
+// console.log(movements);
