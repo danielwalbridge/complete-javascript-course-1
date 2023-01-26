@@ -309,3 +309,31 @@ btnSort.addEventListener('click', function (e) {
 // // does boxing into a number object, so we can use the methods
 // console.log(+(2.7).toFixed(0));
 // console.log(+(2.7).toFixed(1));
+
+// // The reminder Operator
+// console.log(5 % 2);
+// console.log( 5 / 2 ); // 5 = 2 * 2 + 1
+// console.log(8 % 3);
+// console.log(8 / 3); // 8 = 3 * 2 + 2
+//
+// // check if even or odd.
+// // even if divisible by 0
+// console.log(6 % 2);
+// // odd if divisible by 1
+// console.log(7 % 2);
+//
+// const isEven = n => n % 2 === 0;
+//
+// console.log(isEven(1));
+// console.log(isEven(2));
+//
+// // on click of the label, every 2nd row will turn red, and every third will be blue
+// labelBalance.addEventListener('click', function() {
+//   [...document.querySelectorAll('.movements__row')]
+//     .forEach(function(row,i) {
+//       if ( i % 2 === 0) row.style.backgroundColor = 'red';
+//       if (i %  3 === 0) row.style.backgroundColor = 'blue';
+//     });
+// });
+
+
