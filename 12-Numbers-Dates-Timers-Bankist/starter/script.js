@@ -251,3 +251,28 @@ btnSort.addEventListener('click', function (e) {
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
+
+// // Converting and Checking Numbers
+//
+// // conversion
+// console.log( typeof Number('23'));
+// console.log(typeof + "23");
+//
+// // parsing
+// // String needs to start with a number for this to work, else we get NaN
+// console.log(Number.parseInt('10px', 10));
+// console.log(Number.parseInt('px10', 10));
+//
+// // will show us the decimal point using parseFloat.
+// console.log(Number.parseFloat('2.5 rem'));
+// console.log(Number.parseInt('2.5 rem'));
+//
+// // check if not a number
+// console.log(Number.isNaN(20));
+// console.log(Number.isNaN('20'));
+// console.log(Number.isNaN(+ '20'));
+// console.log(Number.isNaN(23/0));
+//
+// // best way to check if a number
+// console.log(Number.isFinite(20));
+// console.log(Number.isFinite('20'));
