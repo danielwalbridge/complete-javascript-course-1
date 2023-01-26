@@ -94,7 +94,7 @@ const displayMovements = function (movements, sort = false) {
         <div class="movements__type movements__type--${type}">${
       i + 1
     } ${type}</div>
-        <div class="movements__value">${mov}€</div>
+        <div class="movements__value">${mov.toFixed(2)}€</div>
       </div>
     `;
 
@@ -104,19 +104,19 @@ const displayMovements = function (movements, sort = false) {
 
 const calcDisplayBalance = function (acc) {
   acc.balance = acc.movements.reduce((acc, mov) => acc + mov, 0);
-  labelBalance.textContent = `${acc.balance}€`;
+  labelBalance.textContent = `${acc.balance.toFixed(2)}€`;
 };
 
 const calcDisplaySummary = function (acc) {
   const incomes = acc.movements
     .filter(mov => mov > 0)
     .reduce((acc, mov) => acc + mov, 0);
-  labelSumIn.textContent = `${incomes}€`;
+  labelSumIn.textContent = `${incomes.toFixed(2)}€`;
 
   const out = acc.movements
     .filter(mov => mov < 0)
     .reduce((acc, mov) => acc + mov, 0);
-  labelSumOut.textContent = `${Math.abs(out)}€`;
+  labelSumOut.textContent = `${Math.abs(out).toFixed(2)}€`;
 
   const interest = acc.movements
     .filter(mov => mov > 0)
@@ -126,7 +126,7 @@ const calcDisplaySummary = function (acc) {
       return int >= 1;
     })
     .reduce((acc, int) => acc + int, 0);
-  labelSumInterest.textContent = `${interest}€`;
+  labelSumInterest.textContent = `${interest.toFixed(2)}€`;
 };
 
 const createUsernames = function (accs) {
@@ -206,7 +206,7 @@ btnTransfer.addEventListener('click', function (e) {
 btnLoan.addEventListener('click', function (e) {
   e.preventDefault();
 
-  const amount = Number(inputLoanAmount.value);
+  const amount = Math.floor(inputLoanAmount.value);
 
   if (amount > 0 && currentAccount.movements.some(mov => mov >= amount * 0.1)) {
     // Add movement
@@ -276,3 +276,36 @@ btnSort.addEventListener('click', function (e) {
 // // best way to check if a number
 // console.log(Number.isFinite(20));
 // console.log(Number.isFinite('20'));
+
+
+// // Math and Rounding
+//
+// // square root
+// console.log(Math.sqrt(25));
+// // Get Max
+// console.log(Math.max(2,'15', 20, '25'));
+// // get min
+// console.log(Math.min(5,'15', 20, '25'));
+// // constants
+// console.log(Math.PI * Number.parseFloat('10px') ** 2);
+//
+// // gets a ran number between 1 and 6
+// console.log(Math.trunc(Math.random() * 6) +1 );
+//
+// const randomInt = (min, max) => Math.floor(Math.random() * (max- min) +1) + min;
+//
+// console.log(randomInt(10,15));
+//
+// // rounding ints
+// // all do type coercion
+// console.log(Math.trunc(25.1));
+// console.log(Math.round(25.7));
+// console.log(Math.round(25.5));
+// console.log(Math.round(25.3));
+// console.log(Math.ceil(23.00001));
+// console.log(Math.floor(55.99999999999));
+//
+// // rounding floating points.
+// // does boxing into a number object, so we can use the methods
+// console.log(+(2.7).toFixed(0));
+// console.log(+(2.7).toFixed(1));
