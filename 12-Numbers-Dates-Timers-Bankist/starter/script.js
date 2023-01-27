@@ -359,3 +359,25 @@ btnSort.addEventListener('click', function (e) {
 //
 // // operations
 // console.log(345398793745983745983475893453n * 2347298347298374298374298374234n);
+
+
+// Creating Dates
+//
+// const now = new Date();
+// console.log(now);
+//
+// console.log(new Date(' Aug 02 2020 10:00'));
+//
+// console.log(new Date(account1.movementsDates[0]));
+//
+// // working with dates.
+//
+// const future = new Date(2037,10,19,15,23);
+// console.log(future);
+// console.log(future.getDate());
+// console.log(future.getFullYear());
+// console.log(future.toJSON());
+// console.log(future.getTime());
+//
+// console.log(Date.now());
+// console.log(future.setUTCFullYear(2050));
