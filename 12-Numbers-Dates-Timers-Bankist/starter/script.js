@@ -347,3 +347,15 @@ btnSort.addEventListener('click', function (e) {
 //
 // console.log(Number('23_22'
 // ));
+
+
+// // BigInt
+//
+// // largest number we can use in JS safely
+// console.log(2 ** 53 -1);
+// console.log(Number.MAX_SAFE_INTEGER);
+//
+// console.log(9999999999999999999999999999999999999999999n);
+//
+// // operations
+// console.log(345398793745983745983475893453n * 2347298347298374298374298374234n);
