@@ -381,3 +381,20 @@ btnSort.addEventListener('click', function (e) {
 //
 // console.log(Date.now());
 // console.log(future.setUTCFullYear(2050));
+
+
+// operations With Dates
+//
+// const futureDate = new Date(2037,10,19,15,23);
+// console.log(+futureDate);
+//
+// const calcDaysPassed = (date1, date2) => date2 - date1;
+//
+// console.log(calcDaysPassed( new Date, futureDate));
+//
+// // Timers
+// setTimeout((ing1, ing2) => console.log(`Here is your pizza with toppings ${ing1}, ${ing2}`)
+//   , 3000, 'ass', 'titties');
+//
+// setInterval( () =>
+// console.log(new Date(), 2000));
